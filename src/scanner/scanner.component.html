@@ -1,0 +1,11 @@
+<div>
+    <video #video width="100%" autoplay></video>
+    <button (click)="captureImage()">Capture</button>
+  
+    <div *ngIf="imageSrc">
+      <img #cropperImage [src]="imageSrc" alt="Captured" />
+      <button (click)="downloadImage()">Download</button>
+    </div>
+  
+    <canvas #canvas style="display: none;"></canvas>
+  </div>
